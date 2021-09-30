@@ -14,6 +14,6 @@
     "parcel": "^2.0.0-rc.0"
   },
   "dependencies": {
-    "gsap": "npm:@gsap/simply@^3.8.0"
+    "gsap": "npm:@gsap/shockingly@^3.8.0"
   }
 }
