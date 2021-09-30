@@ -1,0 +1,72 @@
+*{
+    top: 0;
+    left: 0;
+    box-sizing: border-box; 
+ }
+body{
+    margin: 0;
+    background-color: white;
+}
+ .animation-container {
+    position: relative;
+    background: linear-gradient(20deg, rgb(0, 1, 49) 10% , rgba(0, 153, 255, 0.952) 90%);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+#titleText-animation{
+    position: absolute;
+    margin:1em;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    
+}
+  .titlePath {
+    fill: rgba(156, 156, 156, 0.237);
+    stroke: rgba(156, 156, 156, 0.237);
+    stroke-width: 1;  
+  }
+  .mask-path{
+    fill: none;
+    stroke: #fff;
+    stroke-width: 50;  
+    stroke-miterlimit: 10; 
+    stroke-linecap: round;
+  }
+  .glass{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.493));
+}
+.blur{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+.fancyTitle{
+    position: absolute;
+    margin:1em;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.fancyTitle ellipse{
+    fill: none;
+    stroke: salmon;
+}
