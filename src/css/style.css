@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 *{
     top: 0;
     left: 0;
@@ -61,13 +62,55 @@ body{
 
 .webContainer {
     margin: auto;
-    visibility: hidden;margin: 1em;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
     background: black;
     overflow-x: hidden;
     height: 100vh;
     width: 100vw;
 }
+.titleBox{
+    border: 2px solid white;
+    position: absolute;
+    display: table-cell;
+    width: 40%;
+    height: 300px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 100%;
+    text-align: center;
+}
+
+.titleBox h1{
+    border: 2px solid salmon;
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-100%);
+    margin: auto;
+    color: white;
+    font-size: 4rem;
+    
+    letter-spacing: 0.2em;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.titleBox h2{
+    border: 2px solid salmon;
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-100%);
+    margin: auto;
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.2em;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
 
 
 
