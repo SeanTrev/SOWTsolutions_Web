@@ -9,12 +9,13 @@
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
+    <script type="module" src="js/titleAnimation.js"></script>
     <script type="module" src="js/index.js" defer></script>
     <script type="module" src="js/star-warp.js" defer></script>
 
 </head>
 <body>
-       <div class="animation-container" >
+    <div class="animation-container" >
         <div class="blur">
             <svg id="titleText-animation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1094.02 368.04">
                 <g id="title-masks-layer">
@@ -48,12 +49,13 @@
     <div class="webContainer">
         <div id="pixiCanvas">
             <img id="star" src="imgs/star.svg"></img>
+            <div id="titleBox" class="parallaxItem" data-speed="5">
+                <h1 class="text">S.O.W.T</h1>
+                <h2 class="text">Solutions</h2>
+            </div>
         </div>
 
-        <!-- <div class="titleBox">
-            <h1 class="text">S.O.W.T</h1>
-            <h2 class="text">Solutions</h2>
-        </div> -->
+
     </div>
 
 </body>

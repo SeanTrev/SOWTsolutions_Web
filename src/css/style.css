@@ -21,8 +21,7 @@ body{
     height: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    
+    transform: translate(-50%,-50%); 
 }
 .titlePath {
     fill: rgba(156, 156, 156, 0.237);
@@ -69,39 +68,43 @@ body{
     width: 100vw;
 }
 #pixiCanvas{
-    background-color: black;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
     background: radial-gradient( rgb(0,0,90)10%, rgb(0, 0, 36)90%);
     width: 100%;
     height: 100%;
 }
-.titleBox{
+#titleBox{
     background-color: black;
     border: 2px solid white;
     position: absolute;
-    display: table-cell;
+    top: 0;
+    left: 0;
     width: 40%;
+    min-width: 500px;
     height: 250px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    object-fit: cover;
     font-size: 100%;
     text-align: center;
     border-radius: 2em;
 }
 
-.titleBox h1{
+#titleBox h1{
     position: relative;
     display: block;
     top: 50%;
     transform: translateY(-100%);
     margin: auto;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     
-    letter-spacing: 0.2em;
+    letter-spacing: 0.4em;
     font-family: 'Space Grotesk', sans-serif;
 }
-.titleBox h2{
+#titleBox h2{
     position: relative;
     display: block;
     top: 50%;
@@ -109,7 +112,7 @@ body{
     margin: auto;
     color: white;
     font-size: 3rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     font-family: 'Space Grotesk', sans-serif;
 }
 #star{
@@ -117,8 +120,6 @@ body{
     visibility: hidden;
     background-color: white;
     border-radius: 100%;
-    width: 100%;
-    height: 100%;
     left: 0;
     top: 0;
 }
