@@ -10,13 +10,7 @@ const starTexture = document.getElementById("star");
 const stars = [];
 var starCount = 0;
 const totalSprites = app.renderer instanceof PIXI.Renderer ? 1000 : 10;
-const spritesContainer1 = new PIXI.ParticleContainer(200, {
-    scale: true,
-    position: true,
-    alpha: true,
-    interactive: true,
-});
-const spritesContainer2 = new PIXI.ParticleContainer(200, {
+const spritesContainer1 = new PIXI.ParticleContainer(1000, {
     scale: true,
     position: true,
     alpha: true,
@@ -28,10 +22,10 @@ var starFlickerAlpha = 1;
 app.renderer.backgroundAlpha = 0;
 app.view.setAttribute('id', 'stage');
 app.view.setAttribute('class', 'parallaxItem');
-app.view.setAttribute('data-speed', '2');
-canvas.appendChild(app.view);
+app.view.setAttribute('data-speed', '1');
+app.view.setAttribute('posistion', 'absolute');
+canvas.prepend(app.view);
 app.stage.addChild(spritesContainer1);
-app.stage.addChild(spritesContainer2);
 resize();
 
 
@@ -52,13 +46,13 @@ function createStar(starX, starY) {
     starCount++;
     const star = PIXI.Sprite.from(starTexture);
     star.anchor.set(0.5);
-    star.scale.set(random(0.008, 0.05));
+    star.scale.set(random(0.008, 0.03));
     star.alpha = starFlickerAlpha;
     star.tint= 0xffffff;
     star.x = starX;
     star.y = starY;
     stars.push(star);
-    starCount<200 ? spritesContainer1.addChild(star) : spritesContainer2.addChild(star);
+    spritesContainer1.addChild(star);
  } 
 function resize() {
     const parent = app.view.parentNode;
