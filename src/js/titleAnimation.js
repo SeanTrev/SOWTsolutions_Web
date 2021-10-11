@@ -5,7 +5,18 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { CustomWiggle } from "gsap/CustomWiggle";
 gsap.registerPlugin(CustomEase, DrawSVGPlugin, MorphSVGPlugin, CustomWiggle);
 MorphSVGPlugin.convertToPath("rect, circle");
-var titleTextTimeline = gsap.timeline();
+
+
+function removeContainer () {
+    const webCont = document.getElementById("wc");
+    webCont.setAttribute("position", "relative");
+    animationContainer.remove();
+}
+
+
+
+var animationContainer = document.getElementById("ac");
+var titleTextTimeline = gsap.timeline({onComplete: removeContainer});
 
 titleTextTimeline.fromTo("#S-mask-path", {duration:0.5,drawSVG:"0%"}, {duration:0.3,drawSVG:"100%", ease: "circ.inOutinOut"});
 titleTextTimeline.fromTo("#O-mask-path", {duration:0,drawSVG:"0%"}, {duration:0.3,drawSVG:"100%", ease: "circ.inOutinOut"});
@@ -22,3 +33,5 @@ titleTextTimeline.to(".titlePath", {duration:0, visibility:"hidden"});
 titleTextTimeline.to(".title-mask", {duration:0, visibility:"hidden"});
 titleTextTimeline.to(".animation-container", {duration:0, visibility:"hidden"});
 titleTextTimeline.fromTo(".webContainer", {duration: 0, visibility:"visible", opacity: 0},{duration:1, opacity:1},"<-0.9");
+
+

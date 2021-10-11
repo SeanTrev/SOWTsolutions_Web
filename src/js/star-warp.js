@@ -28,8 +28,6 @@ canvas.prepend(app.view);
 app.stage.addChild(spritesContainer1);
 resize();
 
-
-
 for (let i = 0; i < totalSprites; i++) {
     var starX = random(0,app.view.width*3);
     var starY = random(0,app.view.height*3);
@@ -64,12 +62,4 @@ function random(min, max) {
 
 window.addEventListener('resize', resize);
 
-function parallax(e){
-    this.querySelectorAll('.parallaxItem').forEach(item => {
-        const speed = item.getAttribute('data-speed');
-        const x = ((window.innerWidth - e.pageX*speed)/100);
-        const y = ((window.innerHeight - e.pageY*speed)/100);
-        item.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    });
-}
-document.addEventListener('mousemove', parallax);
+
