@@ -3,9 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-
  document.addEventListener('mousemove', parallax);
-
  function parallax(e){
      this.querySelectorAll('.parallaxItem').forEach(item => {
          const speed = item.getAttribute('data-speed');

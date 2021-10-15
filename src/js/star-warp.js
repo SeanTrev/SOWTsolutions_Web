@@ -44,7 +44,7 @@ function createStar(starX, starY) {
     starCount++;
     const star = PIXI.Sprite.from(starTexture);
     star.anchor.set(0.5);
-    star.scale.set(random(0.008, 0.03));
+    star.scale.set(random(0.01, 0.03));
     star.alpha = starFlickerAlpha;
     star.tint= 0xffffff;
     star.x = starX;

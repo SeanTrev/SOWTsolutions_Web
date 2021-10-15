@@ -8,21 +8,26 @@ body{
     margin: 0;
     background-color: white;
 }
-.animation-container {
-    position: relative;
-    background: linear-gradient(20deg, rgb(0, 17, 94) 10% , rgb(0, 47, 255) 90%);
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-}
-#titleText-animation{
-    position: absolute;
+.loader-wrapper{
+    z-index: 1000;
+    position: fixed;
     width: 100%;
     height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%); 
+    background-color: rgb(0, 0, 75);
 }
+#loaderElement{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.loadHex{
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 10px;      
+}
+
+
 .titlePath {
     fill: rgba(156, 156, 156, 0.237);
     stroke: rgba(156, 156, 156, 0.237);
@@ -35,14 +40,7 @@ body{
     stroke-miterlimit: 10; 
     stroke-linecap: round;
 }
-.glass{
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.493));
-}
+
 .blur{
     position: absolute;
     left: 50%;
@@ -59,9 +57,11 @@ body{
     height: 40%;
 }
 
+
 .webContainer {
-    position: absolute;
-    visibility: hidden;
+    position: relative;
+    overflow-x: hidden;
+    /* visibility: hidden; */
     height: 100vh;
     width: 100vw;
 }
@@ -75,6 +75,7 @@ body{
     background: radial-gradient( rgb(0,0,90)10%, rgb(0, 0, 36)90%);
 }
 .titleContainer{
+    visibility: hidden;
     overflow: hidden;
     display: flex;
     width: 100%;
@@ -127,6 +128,7 @@ body{
 
 .scrollPallete{
     display:grid;
+    max-height: 100vh;
     width: 100%;
     height: 100vh;
 }
