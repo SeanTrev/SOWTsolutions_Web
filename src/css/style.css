@@ -61,15 +61,17 @@ body{
 .webContainer {
     position: relative;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
     
     /* visibility: hidden; */
     height: 100vh;
     width: 100vw;
 }
 .titleWrapper{
+    border: 2px solid red;
     height: 100vh;
-    scroll-snap-align: start;
+    width: 100%;
+    position: fixed;
+    display: block;
 
 }
 #pixiCanvas{
@@ -92,7 +94,7 @@ body{
 }
 #titleBox{
     position: relative;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.514);
     border: 2px solid rgb(255, 255, 255);
     width: 700px;
     height: 250px;
@@ -133,20 +135,23 @@ body{
     top: 0;
 }
 
-.scrollPallete{
+.panel{
     height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
+    width: 100%;
+
 }
-.scrollPallete.Projects{
+.panel.Projects{
     background-color: greenyellow;
 }
-.scrollPallete.About{
+
+.panel.About{
     background-color: blueviolet;
 }
-.scrollPallete.Contact{
+
+.panel.Contact{
     background-color: red;
 }
+
 
 
 

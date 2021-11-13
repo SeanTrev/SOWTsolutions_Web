@@ -4,17 +4,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.from(".titleWrapper", {
-//     scrollTrigger: {
-//       trigger: ".titleWrapper",
-//       pin: true,
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+    console.log('did it');
+    ScrollTrigger.create({
 
-//       markers:true,
-//       start: "top",
-//       end: "top 2000px"
-//     },
-//     position:"fixed",
-//   });
+      trigger: panel,
+      start: "top top", 
+      pin: true, 
+      pinSpacing: false 
+    });
+  });
+  
+  
+  ScrollTrigger.create({
+    snap: 1 / 4 // snap whole page to the closest section!
+  });
 
  document.addEventListener('mousemove', parallax);
  function parallax(e){
